@@ -31,7 +31,6 @@ export default function Footer() {
   return (
     <footer ref={ref} className="px-4 pb-4 pt-8 lg:px-5 lg:pb-5">
       <div className="footer-card relative overflow-hidden rounded-[2.4rem] bg-tangerine px-7 pb-8 pt-12 text-white lg:rounded-[3rem] lg:px-14 lg:pt-16">
-}
         <div className="pointer-events-none absolute -left-4 bottom-24 hidden size-24 place-items-center rounded-2xl bg-white/10 lg:grid">
           <span className="font-display text-3xl text-white/25">V</span>
         </div>

@@ -31,7 +31,6 @@ export default function ProductDetail({ product }: { product: Product }) {
   return (
     <section ref={ref} className="px-5 pb-20 pt-8 lg:pt-12">
       <div className="mx-auto max-w-[1240px]">
-}
         <nav
           data-reveal
           className="flex items-center gap-1.5 text-xs text-ink/45"
@@ -51,7 +50,6 @@ export default function ProductDetail({ product }: { product: Product }) {
         <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:gap-16">
           <ProductGallery product={product} />
 
-}
           <div className="flex flex-col lg:pt-4">
             <h1 className="detail-title font-display text-[clamp(1.7rem,3vw,2.6rem)] leading-[1.15]">
               {product.name}
@@ -71,7 +69,6 @@ export default function ProductDetail({ product }: { product: Product }) {
               {product.description}
             </p>
 
-}
             <div data-reveal className="mt-8 flex flex-wrap items-center gap-4">
               <div className="flex items-center rounded-full border border-ink/15 bg-white">
                 <button

@@ -134,7 +134,6 @@ export default function Hero() {
           <div className="order-2 pt-8 lg:order-1 lg:pt-10">
             <FlowerPhoto src={IMAGES.heroFlower} className="hero-flower w-36 lg:w-44" />
 
-}
             <div className="hero-badge relative mt-6 hidden size-28 place-items-center rounded-full bg-ink text-white lg:grid">
               <svg ref={badgeTextRef} viewBox="0 0 100 100" className="absolute inset-0 size-full">
                 <defs>
@@ -203,7 +202,6 @@ export default function Hero() {
               </span>
             </Link>
 
-            {/* mini carousel — right under the Learn more button */}
             <div className="hero-cards mt-8 flex flex-col items-end gap-4 lg:-mr-5">
               <div className="flex items-center gap-2.5">
                 <button
@@ -247,7 +245,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* connect pill — slight slant as an accent */}
         <div className="hero-connect mt-12 flex justify-center lg:mt-2">
           <div className="flex -rotate-3 items-center gap-4 rounded-full bg-white py-2 pl-6 pr-2 shadow-[0_14px_40px_rgba(23,20,15,0.08)] transition-transform hover:rotate-0">
             <span className="text-sm">Let's Connect.</span>
