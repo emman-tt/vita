@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import { gsap, useGSAP } from '../../../lib/gsap'
 
-/** Page header for the products listing — same serif + clay scheme as the hero. */
 export default function ProductsHeader() {
   const ref = useRef<HTMLElement>(null)
 
@@ -45,3 +44,4 @@ export default function ProductsHeader() {
     </section>
   )
 }
+

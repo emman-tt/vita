@@ -1,5 +1,3 @@
-/* Brand icons removed from lucide-react — kept here in the same stroke style. */
-
 type IconProps = {
   size?: number
   className?: string
@@ -55,3 +53,4 @@ export function LinkedinIcon(props: IconProps) {
     </Base>
   )
 }
+

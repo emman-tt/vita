@@ -2,7 +2,6 @@ import { useRef, useState } from 'react'
 import { gsap, useGSAP } from '../../../lib/gsap'
 import type { Product } from '../data'
 
-/** Main image + clickable thumbnail rail, with a soft cross-fade on switch. */
 export default function ProductGallery({ product }: { product: Product }) {
   const [active, setActive] = useState(0)
   const mainRef = useRef<HTMLImageElement>(null)
@@ -51,3 +50,4 @@ export default function ProductGallery({ product }: { product: Product }) {
     </div>
   )
 }
+

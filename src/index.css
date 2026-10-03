@@ -35,7 +35,6 @@ body {
   color: #fff;
 }
 
-/* shimmer skeleton — a soft sheen sweeping across product image placeholders */
 @keyframes shimmer-sweep {
   to {
     transform: translateX(100%);
@@ -56,9 +55,6 @@ body {
   animation: shimmer-sweep 1.6s infinite;
 }
 
-/* hero collage shapes — corners are pebbles curving away from the center,
-   top/bottom middles are domes (rounding weighted to the outer edge),
-   left/right middles are rotated slabs, center is a squircle */
 .blob-1 {
   border-radius: 62% 38% 53% 47% / 54% 58% 42% 46%;
 }
@@ -88,7 +84,6 @@ body {
 }
 
 .blob-7 {
-
 
   border-radius: 62% 38% 53% 47% / 46% 42% 58% 54%;
 }

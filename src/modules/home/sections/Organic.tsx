@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { gsap, initReveals, useGSAP } from '../../../lib/gsap'
 import { IMAGES } from '../../../images'
 
-/** Flat six-petal flower silhouette used as a decorative layer. */
 function FlowerDeco({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 200 200" className={className} aria-hidden>
@@ -60,7 +59,6 @@ export default function Organic() {
         scrollTrigger: { trigger: bottleRef.current, start: 'top 85%' },
       })
 
-      /* gentle idle float on a wrapper so it never fights the entrance tween */
       gsap.to(floatRef.current, {
         y: -12,
         duration: 2.6,
@@ -89,7 +87,7 @@ export default function Organic() {
     <section ref={ref} className="relative py-20 lg:py-32">
       <FlowerDeco className="organic-flower pointer-events-none absolute -top-6 right-[4%] hidden w-44 text-shell md:block lg:w-56" />
 
-      <div className="mx-auto grid max-w-360 
+      <div className="mx-auto grid max-w-360
       items-center gap-14 px-5
        lg:grid-cols-[1fr_1.55fr_0.85fr]
         lg:gap-8 lg:px-10">
@@ -122,3 +120,4 @@ export default function Organic() {
     </section>
   )
 }
+

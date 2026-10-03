@@ -5,7 +5,6 @@ import { gsap, initReveals, useGSAP } from '../../../lib/gsap'
 import { IMAGES } from '../../../images'
 import { FacebookIcon, InstagramIcon, LinkedinIcon } from '../../../components/BrandIcons'
 
-/* one photo flows across all nine blobs; each tile shows its slice of the grid */
 const MOSAIC = IMAGES.mosaic
 const CARDS = IMAGES.cards
 const CARD_GAP = 16
@@ -25,12 +24,9 @@ function SplitLine({ text }: { text: string }) {
   )
 }
 
-/** Eight-petal flower mask, authored on a 300x300 artboard and expressed in
-    objectBoundingBox units (originals / 300) so it scales to any size. */
 const FLOWER_PATH =
   'M 0.5 0.5 C 0.3467 0.3528 0.3467 0.1688 0.5 0.04 C 0.6533 0.1688 0.6533 0.3528 0.5 0.5 Z M 0.5 0.5 C 0.4957 0.2875 0.6258 0.1574 0.8253 0.1747 C 0.8426 0.3742 0.7125 0.5043 0.5 0.5 Z M 0.5 0.5 C 0.6472 0.3467 0.8312 0.3467 0.96 0.5 C 0.8312 0.6533 0.6472 0.6533 0.5 0.5 Z M 0.5 0.5 C 0.7125 0.4957 0.8426 0.6258 0.8253 0.8253 C 0.6258 0.8426 0.4957 0.7125 0.5 0.5 Z M 0.5 0.5 C 0.6533 0.6472 0.6533 0.8312 0.5 0.96 C 0.3467 0.8312 0.3467 0.6472 0.5 0.5 Z M 0.5 0.5 C 0.5043 0.7125 0.3742 0.8426 0.1747 0.8253 C 0.1574 0.6258 0.2875 0.4957 0.5 0.5 Z M 0.5 0.5 C 0.3528 0.6533 0.1688 0.6533 0.04 0.5 C 0.1688 0.3467 0.3528 0.3467 0.5 0.5 Z M 0.5 0.5 C 0.2875 0.5043 0.1574 0.3742 0.1747 0.1747 C 0.3742 0.1574 0.5043 0.2875 0.5 0.5 Z'
 
-/** Portrait photo masked into the eight-petal flower. */
 function FlowerPhoto({ src, className }: { src: string; className?: string }) {
   return (
     <>
@@ -92,10 +88,7 @@ export default function Hero() {
         ease: 'none',
         scrollTrigger: { trigger: ref.current, start: 'top top', end: 'bottom top', scrub: true },
       })
-      /* slice the mosaic across the grid: each tile's background is sized to
-         the full grid and shifted by the tile's layout position, so the photo
-         lines up continuously across the blobs (layout offsets ignore the
-         entrance transforms, so this stays exact while tiles animate) */
+
       const grid = gridRef.current
       if (grid) {
         const paintMosaic = () => {
@@ -136,12 +129,12 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div className="mt-4  flex flex-col items-start gap-8 
+        <div className="mt-4  flex flex-col items-start gap-8
         lg:mt-0 lg:grid lg:grid-cols-[220px_minmax(0,1fr)_280px] lg:gap-16">
           <div className="order-2 pt-8 lg:order-1 lg:pt-10">
             <FlowerPhoto src={IMAGES.heroFlower} className="hero-flower w-36 lg:w-44" />
 
-            {/* rotating scroll badge — right under the flower */}
+}
             <div className="hero-badge relative mt-6 hidden size-28 place-items-center rounded-full bg-ink text-white lg:grid">
               <svg ref={badgeTextRef} viewBox="0 0 100 100" className="absolute inset-0 size-full">
                 <defs>
@@ -171,9 +164,9 @@ export default function Hero() {
               ref={gridRef}
               className="hero-collage relative mx-auto grid w-full
                max-w-110  lg:max-w-220    gap-2 lg:gap-4
-               grid-cols-[1fr_1.5fr_1fr] 
-               grid-rows-[100px_172px_112px] 
-               sm:grid-rows-[122px_216px_136px] 
+               grid-cols-[1fr_1.5fr_1fr]
+               grid-rows-[100px_172px_112px]
+               sm:grid-rows-[122px_216px_136px]
                lg:grid-rows-[170px_200px_206px] "
             >
               {Array.from({ length: 9 }, (_, i) => {
@@ -185,7 +178,7 @@ export default function Hero() {
                     className={`hero-tile blob-${i + 1} overflow-hidden bg-no-repeat`}
                     style={{
                       backgroundImage: `url(${MOSAIC})`,
-                      /* decent pre-JS approximation; paintMosaic makes it exact */
+
                       backgroundSize: '300% 300%',
                       backgroundPosition: `${col * 50}% ${row * 50}%`,
                     }}
@@ -276,3 +269,4 @@ export default function Hero() {
     </section>
   )
 }
+

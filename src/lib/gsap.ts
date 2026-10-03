@@ -6,10 +6,6 @@ gsap.registerPlugin(ScrollTrigger, useGSAP)
 
 export { gsap, ScrollTrigger, useGSAP }
 
-/**
- * Blur-to-clear reveal for every element carrying [data-reveal] inside `root`.
- * Uses the set-then-to pattern so elements start hidden without a flash.
- */
 export function initReveals(root: Element | null) {
   if (!root) return
   gsap.utils.toArray<HTMLElement>('[data-reveal]', root).forEach((el) => {
@@ -24,3 +20,4 @@ export function initReveals(root: Element | null) {
     })
   })
 }
+

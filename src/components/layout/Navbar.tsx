@@ -3,7 +3,6 @@ import { Heart, Plus, Search, User } from 'lucide-react'
 import { Link, NavLink } from 'react-router-dom'
 import { gsap, useGSAP } from '../../lib/gsap'
 
-/* every nav icon routes somewhere — adjust the `to` values here */
 const ACTIONS = [
   { icon: Search, label: 'Search products', to: '/products' },
   { icon: Heart, label: 'Wishlist', to: '/products' },
@@ -76,3 +75,4 @@ export default function Navbar() {
     </header>
   )
 }
+

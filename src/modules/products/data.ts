@@ -1,18 +1,14 @@
 export type Product = {
   slug: string
   name: string
-  /** price in Ghana cedis */
+
   price: number
-  /** short marketing copy shown on the detail page */
+
   description: string
-  /** hot-linked gallery images (first one is the card image) */
+
   gallery: string[]
 }
 
-/**
- * Real catalog scraped from neutriherbsghana.com/product-category/serum —
- * names, prices, galleries and descriptions match the source site.
- */
 export const PRODUCTS: Product[] = [
   {
     slug: 'aha-serum-for-exfoliating-smoothing-skin',
@@ -176,3 +172,4 @@ export const findProduct = (slug?: string) =>
 
 export const relatedProducts = (slug: string, count = 4) =>
   PRODUCTS.filter((p) => p.slug !== slug).slice(0, count)
+

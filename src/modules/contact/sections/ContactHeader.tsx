@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import { gsap, useGSAP } from '../../../lib/gsap'
 
-/** Page header for the contact page — same serif + clay scheme. */
 export default function ContactHeader() {
   const ref = useRef<HTMLElement>(null)
 
@@ -44,3 +43,4 @@ export default function ContactHeader() {
     </section>
   )
 }
+
