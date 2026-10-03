@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&family=Poppins:wght@300;400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #f7f4ee;
+  --color-ink: #17140f;
+  --color-tangerine: #f4651f;
+  --color-clay: #8f8b83;
+  --color-shell: #e9e4da;
+
+  --font-display: "Prata", "Georgia", serif;
+  --font-body: "Poppins", "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-tangerine);
+  color: #fff;
+}
+
+/* shimmer skeleton — a soft sheen sweeping across product image placeholders */
+@keyframes shimmer-sweep {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.6), transparent);
+  animation: shimmer-sweep 1.6s infinite;
+}
+
+/* hero collage shapes — corners are pebbles curving away from the center,
+   top/bottom middles are domes (rounding weighted to the outer edge),
+   left/right middles are rotated slabs, center is a squircle */
+.blob-1 {
+  border-radius: 62% 38% 53% 47% / 54% 58% 42% 46%;
+}
+
+.blob-2 {
+  border-radius: 46% 54% 42% 47% / 62% 62% 38% 38%;
+}
+
+.blob-3 {
+  border-radius: 38% 62% 47% 53% / 54% 58% 42% 46%;
+}
+
+.blob-4 {
+  border-radius: 33% 31% 33% 31% / 31% 33% 31% 33%;
+  width: 18em;
+  transform: rotate(-9deg);
+}
+
+.blob-5 {
+  border-radius: 33% 31% 33% 31% / 31% 33% 31% 33%;
+}
+
+.blob-6 {
+  border-radius: 33% 31% 33% 31% / 31% 33% 31% 33%;
+  width: 18em;
+  transform: rotate(9deg);
+}
+
+.blob-7 {
+
+
+  border-radius: 62% 38% 53% 47% / 46% 42% 58% 54%;
+}
+
+.blob-8 {
+  border-radius: 42% 47% 54% 46% / 38% 38% 62% 62%;
+  
+}
+
+.blob-9 {
+  border-radius: 38% 62% 47% 53% / 46% 42% 58% 54%;
+}
+
+.blob-soft {
+  border-radius: 47% 53% 44% 56% / 56% 45% 55% 44%;
+}
