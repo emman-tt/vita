@@ -158,13 +158,13 @@ export default function Hero() {
             </p>
           </div>
 
-          <div className="order-1 mt-8 w-full lg:order-2 lg:mt-2">
+          <div className="order-1 -mx-5 mt-8 w-[calc(100%+40px)] lg:order-2 lg:mx-0 lg:mt-2 lg:w-full">
             <div
               ref={gridRef}
               className="hero-collage relative mx-auto grid w-full
-               max-w-110  lg:max-w-220    gap-2 lg:gap-4
+               max-w-none lg:max-w-220    gap-2 lg:gap-4
                grid-cols-[1fr_1.5fr_1fr]
-               grid-rows-[100px_172px_112px]
+               grid-rows-[110px_190px_122px]
                sm:grid-rows-[122px_216px_136px]
                lg:grid-rows-[170px_200px_206px] "
             >
@@ -188,7 +188,7 @@ export default function Hero() {
           </div>
 
           <div className="order-3 pt-2 lg:pt-12">
-            <p className="hero-side max-w-63 text-xs leading-relaxed text-ink/60">
+            <p className="hero-side max-w-none text-xs leading-relaxed text-ink/60 sm:max-w-63">
               Nourish your skin with a hydrating serum for a radiant glow. Don't forget to apply
               sunscreen daily to protect against harmful UV rays.
             </p>
@@ -224,20 +224,26 @@ export default function Hero() {
                 </button>
               </div>
 
-              <div className="w-[250px] overflow-hidden">
+              <div className="w-full overflow-hidden lg:w-[250px]">
                 <div ref={stripRef} className="flex w-max gap-4">
                   {CARDS.map((src) => (
                     <div
                       key={src}
-                      className="h-56 w-44 shrink-0 overflow-hidden rounded-[1.5rem]"
+                      className="h-[420px] w-[min(100vw-40px,400px)] shrink-0 overflow-hidden rounded-[2rem] bg-shell lg:h-56 lg:w-44 lg:rounded-[1.5rem]"
                     >
-                      <img src={src} alt="" className="h-full w-full object-cover" />
+                      <img
+                        src={src}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover"
+                      />
                     </div>
                   ))}
                 </div>
               </div>
 
-              <p className="max-w-[200px] text-xs leading-relaxed text-ink/55">
+              <p className="max-w-none text-xs leading-relaxed text-ink/55 lg:max-w-[200px]">
                 Healthy skin starts with simple care — cleanse, hydrate, and protect every day.
                 Consistent skincare keeps your glow fresh and your confidence high.
               </p>

@@ -48,15 +48,15 @@ export default function Organic() {
         scrollTrigger: { trigger: '.organic-blob', start: 'top 80%' },
       })
 
-      gsap.set(bottleRef.current, { autoAlpha: 0, y: 90, rotation: 0 })
+      // gsap.set(bottleRef.current, { autoAlpha: 0, y: 90, rotation: 0 })
       gsap.to(bottleRef.current, {
         autoAlpha: 1,
-        y: 0,
+        y: -10,
         rotation: -30,
         duration: 1.2,
         scale: 1.5,
         ease: 'power3.out',
-        scrollTrigger: { trigger: bottleRef.current, start: 'top 85%' },
+        scrollTrigger: { trigger: bottleRef.current, start: 'top 100%' },
       })
 
       gsap.to(floatRef.current, {
@@ -96,16 +96,17 @@ export default function Organic() {
         </h2>
 
         <div className="relative mx-auto w-fit">
-          <div className="organic-blob h-100 w-72  rotate-20
-           rounded-[10rem] bg-tangerine sm:h-130 sm:w-95 lg:h-140 lg:w-80" />
+          <div className="organic-blob h-80 w-60 rotate-12
+           rounded-[10rem] bg-tangerine sm:h-130 sm:w-95 sm:rotate-20 lg:h-140 lg:w-80" />
           <div ref={floatRef} className="absolute inset-0">
             <Link to="/products" aria-label="Shop our products" className="cursor-pointer">
               <img
                 ref={bottleRef}
                 src={IMAGES.product}
                 alt="Vitamin C + Hyaluronic Acid serum bottle"
-                className="absolute top-1/2 -left-10 h-100 w-auto object-cover transition-transform duration-300 hover:scale-[1.04]
-                 -translate-y-50 drop-shadow-[0_30px_40px_rgba(60,30,0,0.35)]"
+                className="absolute top-20 -left-6 h-72 w-auto object-cover sm:-left-10 sm:h-100
+                 transition-transform duration-300 hover:scale-[1.04]
+                  drop-shadow-[0_30px_40px_rgba(60,30,0,0.35)]"
               />
             </Link>
           </div>

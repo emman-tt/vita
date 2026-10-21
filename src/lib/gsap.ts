@@ -4,6 +4,11 @@ import { useGSAP } from '@gsap/react'
 
 gsap.registerPlugin(ScrollTrigger, useGSAP)
 
+// time-accurate tweens: when frames stall (throttled tab, janky phone),
+// animations jump to their correct time instead of crawling and leaving
+// content stuck invisible for tens of seconds
+gsap.ticker.lagSmoothing(false)
+
 export { gsap, ScrollTrigger, useGSAP }
 
 export function initReveals(root: Element | null) {
