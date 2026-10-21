@@ -6,7 +6,7 @@ export const IMAGES = {
 
   mosaic: asset("face1.jpg"),
 
-  cards: ["face3.jpg", "face4.jpg", "face5.jpg", "face6.jpg", "fasho.png"].map(
+  cards: ["face12.jpg", "face4.jpg", "face2.jpg", "face1.jpg", "face12.png"].map(
     asset,
   ),
 
