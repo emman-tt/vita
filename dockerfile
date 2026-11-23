@@ -1,14 +1,13 @@
-#Stage 1 :install dependencies and build
-FROM node:lts-alpine AS base
+FROM node:24-alpine AS base
 
-RUN corepack enable
+RUN npm install -g pnpm@11.9.0 && pnpm --version
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
 WORKDIR /app
 
-# Copy package files (best caching)
+
 COPY package.json  pnpm-lock.yaml* pnpm-workspace.yaml*  ./
 
 
@@ -18,7 +17,7 @@ RUN --mount=type=cache,target=/pnpm/store \
 COPY . .
 RUN pnpm run build
 
-#Stage 2 :run app on production
+
 
 FROM nginx:alpine
 
