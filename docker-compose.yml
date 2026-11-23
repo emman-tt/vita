@@ -4,7 +4,7 @@ services:
     container_name: vita
     restart: unless-stopped
     ports:
-      - "127.0.0.1:3001:80"
+      - "127.0.0.1:3003:80"
     healthcheck:
       test: ["CMD", "wget", "--spider", "-q", "http://localhost/"]
       interval: 1m30s
